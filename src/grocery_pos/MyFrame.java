@@ -147,8 +147,8 @@ public class MyFrame extends JFrame{
 		
 		
 		// Add items to the items Panel
-		itemPanel.setSize(750, 450);
-		itemPanel.setBounds(0, 50, 750, 500);
+		itemPanel.setSize(750, 550);
+		itemPanel.setBounds(0, 50, 750, 550);
 		itemPanel.add(mangoLabel);
 		itemPanel.add(appleLabel);
 		itemPanel.add(avocadoLabel);
@@ -169,7 +169,7 @@ public class MyFrame extends JFrame{
 		this.setLayout(null);
 		this.setResizable(false);
 		this.setTitle("Grocery POS");
-		this.setSize(750, 550);
+		this.setSize(750, 600);
 		this.setVisible(true);
 		this.add(titlePanel);
 		this.add(itemPanel);
