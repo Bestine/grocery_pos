@@ -2,63 +2,178 @@ package grocery_pos;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridLayout;
 
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 public class MyFrame extends JFrame{
 	JFrame frame = new JFrame();
 	MyFrame(){
-		ImageIcon mangoImage = new ImageIcon("images/mango.png");
-		ImageIcon bananaImage = new ImageIcon("images/banana.png");
+		//Fruits
+		ImageIcon mangoImage = new ImageIcon("images/fruits/mango.png");
+		ImageIcon appleImage = new ImageIcon("images/fruits/apple.png");
+		ImageIcon avocadoImage = new ImageIcon("images/fruits/avocado.png");
+		ImageIcon bananaImage = new ImageIcon("images/fruits/banana.png");
+		ImageIcon coconutImage = new ImageIcon("images/fruits/coconut.png");
+		ImageIcon orangeImage = new ImageIcon("images/fruits/orange.png");
+		ImageIcon pawpawImage = new ImageIcon("images/fruits/pawpaw.png");
+		ImageIcon pineappleImage = new ImageIcon("images/fruits/pineapple.png");
+		ImageIcon watermelonImage = new ImageIcon("images/fruits/watermelon.png");
 		
-		JLabel titleLabel = new JLabel(); //label for title
-		JLabel mangoLabel = new JLabel();
-		JLabel bananaLabel = new JLabel();
+		//VEGETABLES
+		ImageIcon cabbageImage = new ImageIcon("images/vegetables/cabbage.png");
+		ImageIcon carrotImage = new ImageIcon("images/vegetables/carrot.png");
+		ImageIcon onionImage = new ImageIcon("images/vegetables/onion.png");
+		ImageIcon pepperImage = new ImageIcon("images/vegetables/pepper.png");
+		ImageIcon spinachImage = new ImageIcon("images/vegetables/spinach.png");
+		ImageIcon tomatoImage = new ImageIcon("images/vegetables/tomato.png");
 		
+		
+		JLabel titleLabel = new JLabel();
 		titleLabel.setText("Grocery POS");
-		titleLabel.setBounds(0, 0, 50, 750);
-		titleLabel.setFont(new Font("Mv Boli", Font.BOLD, 45));
-		titleLabel.setForeground(Color.GREEN);
-		titleLabel.setVerticalAlignment(JLabel.TOP);
-		titleLabel.setHorizontalAlignment(JLabel.CENTER);
+		titleLabel.setFont(new Font("MV Boli", Font.BOLD, 38));
+		titleLabel.setForeground(Color.green);
 		
-		//Add the fruit labels
-		//Mango
+		
+		// create item Label
+		//FRUITS
+		JLabel mangoLabel = new JLabel();
 		mangoLabel.setText("Mango");
-		mangoLabel.setFont(new Font("Serif", Font.PLAIN, 20));
 		mangoLabel.setIcon(mangoImage);
 		mangoLabel.setVerticalTextPosition(JLabel.BOTTOM);
 		mangoLabel.setHorizontalTextPosition(JLabel.CENTER);
-		mangoLabel.setHorizontalAlignment(JLabel.CENTER);
-		mangoLabel.setVerticalAlignment(JLabel.CENTER);
-		mangoLabel.setBounds(0, 50, 250, 150);
-		/*mangoLabel.setBackground(Color.decode("#A8E4A0"));
-		mangoLabel.setOpaque(true);*/
 		
-		//Banana
+		JLabel appleLabel = new JLabel();
+		appleLabel.setText("Apple");
+		appleLabel.setIcon(appleImage);
+		appleLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		appleLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel avocadoLabel = new JLabel();
+		avocadoLabel.setText("Avocado");
+		avocadoLabel.setIcon(avocadoImage);
+		avocadoLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		avocadoLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel bananaLabel = new JLabel();
 		bananaLabel.setText("Banana");
-		bananaLabel.setFont(new Font("Serif", Font.PLAIN, 20));
 		bananaLabel.setIcon(bananaImage);
 		bananaLabel.setVerticalTextPosition(JLabel.BOTTOM);
 		bananaLabel.setHorizontalTextPosition(JLabel.CENTER);
-		bananaLabel.setHorizontalAlignment(JLabel.CENTER);
-		bananaLabel.setVerticalAlignment(JLabel.CENTER);
-		bananaLabel.setBounds(0, 100, 250, 150);
+		
+		JLabel coconutLabel = new JLabel();
+		coconutLabel.setText("Coconut");
+		coconutLabel.setIcon(coconutImage);
+		coconutLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		coconutLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel orangeLabel = new JLabel();
+		orangeLabel.setText("Orange");
+		orangeLabel.setIcon(orangeImage);
+		orangeLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		orangeLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel pawpawLabel = new JLabel();
+		pawpawLabel.setText("Pawpaw");
+		pawpawLabel.setIcon(pawpawImage);
+		pawpawLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		pawpawLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel pineappleLabel = new JLabel();
+		pineappleLabel.setText("Pineapple");
+		pineappleLabel.setIcon(pineappleImage);
+		pineappleLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		pineappleLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel watermelonLabel = new JLabel();
+		watermelonLabel.setText("Watermelon");
+		watermelonLabel.setIcon(watermelonImage);
+		watermelonLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		watermelonLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		//VEGETABLES
+		JLabel cabbageLabel = new JLabel();
+		cabbageLabel.setText("Cabbage");
+		cabbageLabel.setIcon(cabbageImage);
+		cabbageLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		cabbageLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel carrotLabel = new JLabel();
+		carrotLabel.setText("Carrot");
+		carrotLabel.setIcon(carrotImage);
+		carrotLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		carrotLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel onionLabel = new JLabel();
+		onionLabel.setText("Onion");
+		onionLabel.setIcon(onionImage);
+		onionLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		onionLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel pepperLabel = new JLabel();
+		pepperLabel.setText("Pepper");
+		pepperLabel.setIcon(pepperImage);
+		pepperLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		pepperLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel spinachLabel = new JLabel();
+		spinachLabel.setText("Spinach");
+		spinachLabel.setIcon(spinachImage);
+		spinachLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		spinachLabel.setHorizontalTextPosition(JLabel.CENTER);
+		
+		JLabel tomatoLabel = new JLabel();
+		tomatoLabel.setText("Tomato");
+		tomatoLabel.setIcon(tomatoImage);
+		tomatoLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		tomatoLabel.setHorizontalTextPosition(JLabel.CENTER);
 		
 		
+		// Add title and items panels
+		JPanel titlePanel = new JPanel();
+		JPanel itemPanel = new JPanel();
 		
-//		this.setLayout(null);
+		
+		// Add items to titlePanel
+		titlePanel.setSize(750, 50);
+		titlePanel.setBounds(0, 0, 750, 50);
+		titlePanel.add(titleLabel);
+		
+		
+		// Add items to the items Panel
+		itemPanel.setSize(750, 450);
+		itemPanel.setBounds(0, 50, 750, 500);
+		itemPanel.add(mangoLabel);
+		itemPanel.add(appleLabel);
+		itemPanel.add(avocadoLabel);
+		itemPanel.add(bananaLabel);
+		itemPanel.add(coconutLabel);
+		itemPanel.add(orangeLabel);
+		itemPanel.add(pineappleLabel);
+		itemPanel.add(pawpawLabel);
+		itemPanel.add(watermelonLabel);
+		itemPanel.add(cabbageLabel);
+		itemPanel.add(carrotLabel);
+		itemPanel.add(onionLabel);
+		itemPanel.add(pepperLabel);
+		itemPanel.add(spinachLabel);
+		itemPanel.add(tomatoLabel);
+		
+		
+		this.setLayout(null);
+		this.setResizable(false);
 		this.setTitle("Grocery POS");
-		this.setSize(750, 500);
+		this.setSize(750, 550);
 		this.setVisible(true);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.add(titleLabel);
-		this.add(mangoLabel);
-		this.add(bananaLabel);
-		this.pack();
+		this.add(titlePanel);
+		this.add(itemPanel);
+		
 	}
 
 }
