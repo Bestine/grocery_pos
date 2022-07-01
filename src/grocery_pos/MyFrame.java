@@ -169,6 +169,7 @@ public class MyFrame extends JFrame{
 		this.setLayout(null);
 		this.setResizable(false);
 		this.setTitle("Grocery POS");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(750, 600);
 		this.setVisible(true);
 		this.add(titlePanel);
