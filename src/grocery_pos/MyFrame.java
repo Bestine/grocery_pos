@@ -5,15 +5,21 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class MyFrame extends JFrame{
+public class MyFrame extends JFrame implements ActionListener{
+	
 	JFrame frame = new JFrame();
+	JButton mangoButton;
+	
 	MyFrame(){
 		//Fruits
 		ImageIcon mangoImage = new ImageIcon("images/fruits/mango.png");
@@ -43,11 +49,21 @@ public class MyFrame extends JFrame{
 		
 		// create item Label
 		//FRUITS
-		JLabel mangoLabel = new JLabel();
-		mangoLabel.setText("Mango");
-		mangoLabel.setIcon(mangoImage);
-		mangoLabel.setVerticalTextPosition(JLabel.BOTTOM);
-		mangoLabel.setHorizontalTextPosition(JLabel.CENTER);
+//		JLabel mangoLabel = new JLabel();
+//		mangoLabel.setText("Mango");
+//		mangoLabel.setIcon(mangoImage);
+//		mangoLabel.setVerticalTextPosition(JLabel.BOTTOM);
+//		mangoLabel.setHorizontalTextPosition(JLabel.CENTER);
+
+		
+		mangoButton = new JButton();
+		mangoButton.addActionListener(this);
+		mangoButton.setText("Mango");
+		mangoButton.setIcon(mangoImage);
+		mangoButton.setVerticalTextPosition(JButton.BOTTOM);
+		mangoButton.setHorizontalTextPosition(JButton.CENTER);
+		mangoButton.setFocusable(false);
+		
 		
 		JLabel appleLabel = new JLabel();
 		appleLabel.setText("Apple");
@@ -149,7 +165,7 @@ public class MyFrame extends JFrame{
 		// Add items to the items Panel
 		itemPanel.setSize(750, 550);
 		itemPanel.setBounds(0, 50, 750, 550);
-		itemPanel.add(mangoLabel);
+		itemPanel.add(mangoButton);
 		itemPanel.add(appleLabel);
 		itemPanel.add(avocadoLabel);
 		itemPanel.add(bananaLabel);
@@ -174,6 +190,15 @@ public class MyFrame extends JFrame{
 		this.setVisible(true);
 		this.add(titlePanel);
 		this.add(itemPanel);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if (e.getSource()==mangoButton) {
+			System.out.println("You just ordered Mango");
+		}
 		
 	}
 
