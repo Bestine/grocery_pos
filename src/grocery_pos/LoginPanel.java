@@ -10,8 +10,12 @@ import javax.swing.JPanel;
 
 public class LoginPanel extends JPanel implements ActionListener{
 	
+	VegFruitsPanel vegFruitsPanel = new VegFruitsPanel();;
+	
+	JButton loginButton;
+	
 	LoginPanel(){
-		JButton loginButton = new JButton();
+		loginButton = new JButton();
 		loginButton.setText("LOGIN");
 		loginButton.setBounds(400, 200, 150, 50);
 		loginButton.setFocusable(false);
@@ -24,14 +28,19 @@ public class LoginPanel extends JPanel implements ActionListener{
 		this.setSize(900, 550);
 		this.setBounds(0, 0, 900, 550);
 		this.setBackground(Color.WHITE);
-		this.setVisible(false);
 		this.add(loginButton);
+		this.setVisible(true);
 		
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		if (e.getSource()==loginButton) {			
+			this.setVisible(false);
+			vegFruitsPanel.setVisible(true);			
+			
+		}
 		
 	}
 }
