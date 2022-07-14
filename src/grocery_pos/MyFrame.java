@@ -37,6 +37,8 @@ public class MyFrame extends JFrame implements ActionListener{
 	JButton spinachButton;
 	JButton tomatoButton;	
 	
+	LoginPanel loginPanel = new LoginPanel();
+	
 	MyFrame(){
 		//Fruits
 		ImageIcon mangoImage = new ImageIcon("images/fruits/mango.png");
@@ -57,13 +59,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		ImageIcon spinachImage = new ImageIcon("images/vegetables/spinach.png");
 		ImageIcon tomatoImage = new ImageIcon("images/vegetables/tomato.png");
 		
-		
-		JLabel titleLabel = new JLabel();
-		titleLabel.setText("Grocery POS");
-		titleLabel.setFont(new Font("MV Boli", Font.BOLD, 38));
-		titleLabel.setForeground(Color.green);
-		
-		
+			
 		// create item Buttons
 		//FRUITS		
 		mangoButton = new JButton();
@@ -188,20 +184,13 @@ public class MyFrame extends JFrame implements ActionListener{
 		tomatoButton.setFocusable(false);
 		
 		
-		// Add title and items panels
-		JPanel titlePanel = new JPanel();
+		// Add items and login panels
 		JPanel itemPanel = new JPanel();
 		
-		
-		// Add items to titlePanel
-		titlePanel.setSize(900, 50);
-		titlePanel.setBounds(0, 0, 900, 50);
-		titlePanel.add(titleLabel);
-		
-		
+
 		// Add items to the items Panel
 		itemPanel.setSize(900, 550);
-		itemPanel.setBounds(0, 50, 900, 550);
+		itemPanel.setBounds(0, 0, 900, 550);
 		itemPanel.add(mangoButton);
 		itemPanel.add(appleButton);
 		itemPanel.add(avocadoButton);
@@ -217,16 +206,17 @@ public class MyFrame extends JFrame implements ActionListener{
 		itemPanel.add(pepperButton);
 		itemPanel.add(spinachButton);
 		itemPanel.add(tomatoButton);
+		itemPanel.setVisible(true);
 		
 		
 		this.setLayout(null);
 		this.setResizable(false);
 		this.setTitle("Grocery POS");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(900, 600);
+		this.setSize(900, 550);
 		this.setVisible(true);
-		this.add(titlePanel);
 		this.add(itemPanel);
+		this.add(loginPanel);
 		
 	}
 
@@ -263,6 +253,9 @@ public class MyFrame extends JFrame implements ActionListener{
 		else if (e.getSource()==cabbageButton) {
 			System.out.println("You just ordered Cabbage");
 		}
+		else if (e.getSource()==carrotButton) {
+			System.out.println("You just ordered Carrot");
+		}
 		else if (e.getSource()==onionButton) {
 			System.out.println("You just ordered Onion");
 		}
@@ -270,15 +263,11 @@ public class MyFrame extends JFrame implements ActionListener{
 			System.out.println("You just ordered Pepper");
 		}
 		else if (e.getSource()==spinachButton) {
-			System.out.println("You just ordered spinach");
+			System.out.println("You just ordered Spinach");
 		}
 		else if (e.getSource()==tomatoButton) {
 			System.out.println("You just ordered Tomato");
 		}
-		else if (e.getSource()==watermelonButton) {
-			System.out.println("You just ordered Watermelon");
-		}
-		
 	}
 
 }
