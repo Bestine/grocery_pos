@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -59,6 +60,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		mangoButton.setHorizontalTextPosition(JButton.CENTER);
 		mangoButton.setFocusable(false);
 		mangoButton.setBackground(Color.WHITE);
+		mangoButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		appleButton = new JButton();
 		appleButton.addActionListener(this);
@@ -68,6 +70,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		appleButton.setHorizontalTextPosition(JButton.CENTER);
 		appleButton.setFocusable(false);
 		appleButton.setBackground(Color.WHITE);
+		appleButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		avocadoButton = new JButton();
 		avocadoButton.addActionListener(this);
@@ -77,6 +80,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		avocadoButton.setHorizontalTextPosition(JButton.CENTER);
 		avocadoButton.setFocusable(false);
 		avocadoButton.setBackground(Color.WHITE);
+		avocadoButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		bananaButton = new JButton();
 		bananaButton.addActionListener(this);
@@ -86,6 +90,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		bananaButton.setHorizontalTextPosition(JButton.CENTER);
 		bananaButton.setFocusable(false);
 		bananaButton.setBackground(Color.WHITE);
+		bananaButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		coconutButton = new JButton();
 		coconutButton.addActionListener(this);
@@ -95,6 +100,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		coconutButton.setHorizontalTextPosition(JButton.CENTER);
 		coconutButton.setFocusable(false);
 		coconutButton.setBackground(Color.WHITE);
+		coconutButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		orangeButton = new JButton();
 		orangeButton.addActionListener(this);
@@ -104,6 +110,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		orangeButton.setHorizontalTextPosition(JButton.CENTER);
 		orangeButton.setFocusable(false);
 		orangeButton.setBackground(Color.WHITE);
+		orangeButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		pawpawButton = new JButton();
 		pawpawButton.addActionListener(this);
@@ -113,6 +120,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		pawpawButton.setHorizontalTextPosition(JButton.CENTER);
 		pawpawButton.setFocusable(false);
 		pawpawButton.setBackground(Color.WHITE);
+		pawpawButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		pineappleButton = new JButton();
 		pineappleButton.addActionListener(this);
@@ -122,6 +130,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		pineappleButton.setHorizontalTextPosition(JButton.CENTER);
 		pineappleButton.setFocusable(false);
 		pineappleButton.setBackground(Color.WHITE);
+		pineappleButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		watermelonButton = new JButton();
 		watermelonButton.addActionListener(this);
@@ -131,6 +140,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		watermelonButton.setHorizontalTextPosition(JButton.CENTER);
 		watermelonButton.setFocusable(false);
 		watermelonButton.setBackground(Color.WHITE);
+		watermelonButton.setBorder(BorderFactory.createEmptyBorder());
 				
 				//VEGETABLES
 		cabbageButton = new JButton();
@@ -141,6 +151,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		cabbageButton.setHorizontalTextPosition(JButton.CENTER);
 		cabbageButton.setFocusable(false);
 		cabbageButton.setBackground(Color.WHITE);
+		cabbageButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		carrotButton = new JButton();
 		carrotButton.addActionListener(this);
@@ -150,6 +161,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		carrotButton.setHorizontalTextPosition(JButton.CENTER);
 		carrotButton.setFocusable(false);
 		carrotButton.setBackground(Color.WHITE);
+		carrotButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		onionButton = new JButton();
 		onionButton.addActionListener(this);
@@ -159,6 +171,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		onionButton.setHorizontalTextPosition(JButton.CENTER);
 		onionButton.setFocusable(false);
 		onionButton.setBackground(Color.WHITE);
+		onionButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		pepperButton = new JButton();
 		pepperButton.addActionListener(this);
@@ -168,6 +181,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		pepperButton.setHorizontalTextPosition(JButton.CENTER);
 		pepperButton.setFocusable(false);
 		pepperButton.setBackground(Color.WHITE);
+		pepperButton.setBorder(BorderFactory.createEtchedBorder());
 				
 		spinachButton = new JButton();
 		spinachButton.addActionListener(this);
@@ -177,6 +191,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		spinachButton.setHorizontalTextPosition(JButton.CENTER);
 		spinachButton.setFocusable(false);
 		spinachButton.setBackground(Color.WHITE);
+		spinachButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		tomatoButton = new JButton();
 		tomatoButton.addActionListener(this);
@@ -186,10 +201,12 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		tomatoButton.setHorizontalTextPosition(JButton.CENTER);
 		tomatoButton.setFocusable(false);
 		tomatoButton.setBackground(Color.WHITE);
+		tomatoButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		// Add items to the vegFruitsPanel
-		this.setSize(900, 550);
-		this.setBounds(0, 0, 900, 550);
+		this.setSize(720, 485);
+		this.setBounds(0, 0, 720, 485);
+		this.setBackground(Color.ORANGE);
 		this.add(mangoButton);
 		this.add(appleButton);
 		this.add(avocadoButton);
@@ -205,7 +222,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		this.add(pepperButton);
 		this.add(spinachButton);
 		this.add(tomatoButton);
-		this.setVisible(false);
+		this.setVisible(true);
 	}
 
 	@Override
