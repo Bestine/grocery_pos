@@ -27,11 +27,11 @@ public class LoginPanel extends JPanel implements ActionListener{
 		loginButton.setBorder(BorderFactory.createEmptyBorder());
 		
 		this.setLayout(null);
-		this.setSize(710, 520);
-		this.setBounds(0, 0, 710, 520);
+		this.setSize(710, 485);
+		this.setBounds(0, 50, 710, 485);
 		this.setBackground(Color.WHITE);
 		this.add(loginButton);
-		this.setVisible(true);
+		this.setVisible(false);
 		
 	}
 

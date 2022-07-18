@@ -205,8 +205,8 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		tomatoButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		// Add items to the vegFruitsPanel
-		this.setSize(710, 520);
-		this.setBounds(0, 0, 710, 520);
+		this.setSize(710, 485);
+		this.setBounds(0, 50, 710, 485);
 		this.setBackground(new Color(102, 255, 102));
 		this.add(mangoButton);
 		this.add(appleButton);
@@ -223,7 +223,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		this.add(pepperButton);
 		this.add(spinachButton);
 		this.add(tomatoButton);
-		this.setVisible(false);
+		this.setVisible(true);
 	}
 
 	@Override
