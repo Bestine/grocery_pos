@@ -9,7 +9,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class LoginPanel extends JPanel implements ActionListener{
+public class LoginPanel extends JPanel{
 	
 	VegFruitsPanel vegFruitsPanel = new VegFruitsPanel();
 	
@@ -23,7 +23,6 @@ public class LoginPanel extends JPanel implements ActionListener{
 		loginButton.setFont(new Font("MV Boli", Font.BOLD, 20));
 		loginButton.setForeground(Color.WHITE);
 		loginButton.setBackground(new Color(0, 255, 51));
-		loginButton.addActionListener(this);
 		loginButton.setBorder(BorderFactory.createEmptyBorder());
 		
 		this.setLayout(null);
@@ -32,17 +31,6 @@ public class LoginPanel extends JPanel implements ActionListener{
 		this.setBackground(Color.WHITE);
 		this.add(loginButton);
 		this.setVisible(false);
-		
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if (e.getSource()==loginButton) {	
-			this.setVisible(false);
-			vegFruitsPanel.setVisible(true);
-		
-		}
 		
 	}
 }
