@@ -18,11 +18,11 @@ public class LoginPanel extends JPanel implements ActionListener{
 	LoginPanel(){
 		loginButton = new JButton();
 		loginButton.setText("LOGIN");
-		loginButton.setBounds(300, 170, 150, 50);
+		loginButton.setBounds(300, 190, 150, 50);
 		loginButton.setFocusable(false);
 		loginButton.setFont(new Font("MV Boli", Font.BOLD, 20));
 		loginButton.setForeground(Color.WHITE);
-		loginButton.setBackground(Color.ORANGE);
+		loginButton.setBackground(new Color(0, 255, 51));
 		loginButton.addActionListener(this);
 		loginButton.setBorder(BorderFactory.createEmptyBorder());
 		
