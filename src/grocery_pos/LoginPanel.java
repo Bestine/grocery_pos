@@ -28,10 +28,10 @@ public class LoginPanel extends JPanel implements ActionListener{
 		
 		this.setLayout(null);
 		this.setSize(710, 520);
-		this.setBounds(0, 0, 720, 520);
+		this.setBounds(0, 0, 710, 520);
 		this.setBackground(Color.WHITE);
 		this.add(loginButton);
-		this.setVisible(false);
+		this.setVisible(true);
 		
 	}
 

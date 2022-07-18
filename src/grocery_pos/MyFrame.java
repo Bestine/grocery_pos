@@ -1,14 +1,8 @@
 package grocery_pos;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -23,7 +17,23 @@ public class MyFrame extends JFrame{
 	LoginPanel loginPanel = new LoginPanel();
 	JPanel vegFruitsPanel = new VegFruitsPanel();
 	
-	MyFrame(){	
+	MyFrame(){
+		// Add a welcome icon
+		ImageIcon welcomeIcon = new ImageIcon("images/logos/welcome.png");
+		
+		
+		// Create A welcome label
+		JLabel welcomeLabel = new JLabel();
+		welcomeLabel.setText("WELCOME!");
+		welcomeLabel.setFont(new Font("Serif", Font.BOLD, 60));
+		welcomeLabel.setForeground(Color.WHITE);
+		welcomeLabel.setIcon(welcomeIcon);
+		welcomeLabel.setHorizontalTextPosition(JLabel.CENTER);
+		welcomeLabel.setVerticalTextPosition(JLabel.CENTER);;
+		welcomeLabel.setSize(710, 520);
+		welcomeLabel.setBounds(0, 0, 710, 520);
+		welcomeLabel.setVisible(true);
+	
 		
 		this.setLayout(null);
 		this.setResizable(false);
@@ -31,8 +41,9 @@ public class MyFrame extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(710, 520);
 		this.setVisible(true);
-		this.add(loginPanel);
-		this.add(vegFruitsPanel);
+		this.add(welcomeLabel);
+//		this.add(loginPanel);
+//		this.add(vegFruitsPanel);
 				
 	}
 }

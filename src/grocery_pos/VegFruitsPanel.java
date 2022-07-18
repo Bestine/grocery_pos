@@ -223,7 +223,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		this.add(pepperButton);
 		this.add(spinachButton);
 		this.add(tomatoButton);
-		this.setVisible(true);
+		this.setVisible(false);
 	}
 
 	@Override
