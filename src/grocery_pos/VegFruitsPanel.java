@@ -1,6 +1,7 @@
 package grocery_pos;
 
 import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -181,7 +182,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		pepperButton.setHorizontalTextPosition(JButton.CENTER);
 		pepperButton.setFocusable(false);
 		pepperButton.setBackground(Color.WHITE);
-		pepperButton.setBorder(BorderFactory.createEtchedBorder());
+		pepperButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		spinachButton = new JButton();
 		spinachButton.addActionListener(this);
@@ -204,9 +205,9 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		tomatoButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		// Add items to the vegFruitsPanel
-		this.setSize(720, 485);
-		this.setBounds(0, 0, 720, 485);
-		this.setBackground(Color.ORANGE);
+		this.setSize(710, 520);
+		this.setBounds(0, 0, 710, 520);
+		this.setBackground(new Color(102, 255, 102));
 		this.add(mangoButton);
 		this.add(appleButton);
 		this.add(avocadoButton);

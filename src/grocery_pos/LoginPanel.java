@@ -27,8 +27,8 @@ public class LoginPanel extends JPanel implements ActionListener{
 		loginButton.setBorder(BorderFactory.createEmptyBorder());
 		
 		this.setLayout(null);
-		this.setSize(720, 485);
-		this.setBounds(0, 0, 720, 485);
+		this.setSize(710, 520);
+		this.setBounds(0, 0, 720, 520);
 		this.setBackground(Color.WHITE);
 		this.add(loginButton);
 		this.setVisible(false);
@@ -41,8 +41,7 @@ public class LoginPanel extends JPanel implements ActionListener{
 		if (e.getSource()==loginButton) {	
 			this.setVisible(false);
 			vegFruitsPanel.setVisible(true);
-			vegFruitsPanel.repaint();
-			
+		
 		}
 		
 	}

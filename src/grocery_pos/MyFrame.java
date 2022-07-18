@@ -29,7 +29,7 @@ public class MyFrame extends JFrame{
 		this.setResizable(false);
 		this.setTitle("Grocery POS");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(720, 485);
+		this.setSize(710, 520);
 		this.setVisible(true);
 		this.add(loginPanel);
 		this.add(vegFruitsPanel);
