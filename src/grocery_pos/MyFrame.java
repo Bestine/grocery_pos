@@ -14,9 +14,6 @@ import javax.swing.JPanel;
 
 public class MyFrame extends JFrame implements ActionListener{
 	
-	JFrame frame = new JFrame();
-	
-	
 	LoginPanel loginPanel = new LoginPanel();
 	SignupPanel signupPanel = new SignupPanel();
 	JPanel vegFruitsPanel = new VegFruitsPanel();
