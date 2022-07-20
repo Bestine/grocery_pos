@@ -12,18 +12,22 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class MyFrame extends JFrame implements ActionListener{
+public class CredentialsFrame extends JFrame implements ActionListener{
 	
-	LoginPanel loginPanel = new LoginPanel();
-	SignupPanel signupPanel = new SignupPanel();
-	JPanel vegFruitsPanel = new VegFruitsPanel();
+	JPanel loginPanel;
+	JPanel signupPanel;
 	
 	//Make components Global
 	JLabel welcomeLabel;
 	JButton loginButton;
 	JButton signupButton;
 	
-	MyFrame(){
+	JButton submitLoginsButton;
+	JButton createAccountButton;
+	
+	CredentialsFrame(){
+		//========WELCOME PAGE============
+		
 		// Add a welcome icon
 		ImageIcon welcomeIcon = new ImageIcon("images/logos/welcome.png");
 		
@@ -85,7 +89,48 @@ public class MyFrame extends JFrame implements ActionListener{
 		headerPanel.add(titleLabel);
 		headerPanel.add(loginButton);
 		headerPanel.add(signupButton);
+		
 	
+		//=======================LOGIN PAGE=========================
+		//submitLogins Button
+		submitLoginsButton = new JButton();
+		submitLoginsButton.setText("LOGIN");
+		submitLoginsButton.setBounds(300, 190, 150, 50);
+		submitLoginsButton.setFocusable(false);
+		submitLoginsButton.setFont(new Font("MV Boli", Font.BOLD, 20));
+		submitLoginsButton.setForeground(Color.WHITE);
+		submitLoginsButton.setBackground(new Color(0, 255, 51));
+		submitLoginsButton.setBorder(BorderFactory.createEmptyBorder());
+		submitLoginsButton.addActionListener(this);		
+		
+		loginPanel = new JPanel();
+		loginPanel.setLayout(null);
+		loginPanel.setSize(710, 485);
+		loginPanel.setBounds(0, 50, 710, 485);
+		loginPanel.setBackground(Color.WHITE);
+		loginPanel.add(submitLoginsButton);
+		loginPanel.setVisible(false);
+		
+		
+		//======================SIGN UP PAGE=======================
+		createAccountButton = new JButton();
+		createAccountButton = new JButton();
+		createAccountButton.setText("SIGN UP");
+		createAccountButton.setBounds(300, 190, 150, 50);
+		createAccountButton.setFocusable(false);
+		createAccountButton.setFont(new Font("MV Boli", Font.BOLD, 20));
+		createAccountButton.setForeground(Color.WHITE);
+		createAccountButton.setBackground(new Color(0, 255, 51));
+		createAccountButton.setBorder(BorderFactory.createEmptyBorder());
+		createAccountButton.addActionListener(this);
+		
+		signupPanel = new JPanel();
+		signupPanel.setLayout(null);
+		signupPanel.setSize(710, 485);
+		signupPanel.setBounds(0, 50, 710, 485);
+		signupPanel.setBackground(Color.WHITE);
+		signupPanel.add(createAccountButton);
+		signupPanel.setVisible(false);
 		
 		this.setLayout(null);
 		this.setResizable(false);
@@ -97,22 +142,29 @@ public class MyFrame extends JFrame implements ActionListener{
 		this.add(headerPanel);
 		this.add(loginPanel);
 		this.add(signupPanel);
-		this.add(vegFruitsPanel);
 				
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getSource()==loginButton) {
+		if(e.getSource()==loginButton) {
 			welcomeLabel.setVisible(false);
 			signupPanel.setVisible(false);
 			loginPanel.setVisible(true);
 		}
-		else if (e.getSource()==signupButton) {
+		else if(e.getSource()==signupButton) {
 			welcomeLabel.setVisible(false);
 			loginPanel.setVisible(false);
 			signupPanel.setVisible(true);
+		}
+		else if(e.getSource()==submitLoginsButton) {
+			this.dispose();
+			new ItemsFrame();
+		}
+		else if(e.getSource()==createAccountButton) {
+			this.dispose();
+			new ItemsFrame();
 		}
 	}
 }

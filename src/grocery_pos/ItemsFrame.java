@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class ItemsFrame extends JFrame implements ActionListener{
+	
 	VegFruitsPanel vegFruitsPanel = new VegFruitsPanel();
 	
 	JButton logoutButton;
@@ -37,6 +38,7 @@ public class ItemsFrame extends JFrame implements ActionListener{
 		vegFruitsButton.setBackground(new Color(0, 255, 51));
 		vegFruitsButton.setBorder(BorderFactory.createEmptyBorder());
 		vegFruitsButton.addActionListener(this);
+
 		
 		this.setLayout(null);
 		this.setResizable(false);
