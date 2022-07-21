@@ -51,10 +51,10 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 							
 		// create item Buttons
-		//FRUITS		
+		//LEGUMES		
 		beansButton = new JButton();
 		beansButton.addActionListener(this);
-		beansButton.setText("beans");
+		beansButton.setText("Beans");
 		beansButton.setIcon(beansImage);
 		beansButton.setVerticalTextPosition(JButton.BOTTOM);
 		beansButton.setHorizontalTextPosition(JButton.CENTER);
@@ -64,7 +64,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		peasButton = new JButton();
 		peasButton.addActionListener(this);
-		peasButton.setText("peas");
+		peasButton.setText("Peas");
 		peasButton.setIcon(peasImage);
 		peasButton.setVerticalTextPosition(JButton.BOTTOM);
 		peasButton.setHorizontalTextPosition(JButton.CENTER);
@@ -74,7 +74,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		pigeonpeasButton = new JButton();
 		pigeonpeasButton.addActionListener(this);
-		pigeonpeasButton.setText("pigeonpeas");
+		pigeonpeasButton.setText("Pigeon Peas");
 		pigeonpeasButton.setIcon(pigeonpeasImage);
 		pigeonpeasButton.setVerticalTextPosition(JButton.BOTTOM);
 		pigeonpeasButton.setHorizontalTextPosition(JButton.CENTER);
@@ -84,7 +84,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		soyabeansButton = new JButton();
 		soyabeansButton.addActionListener(this);
-		soyabeansButton.setText("soyabeans");
+		soyabeansButton.setText("Soya Beans");
 		soyabeansButton.setIcon(soyabeansImage);
 		soyabeansButton.setVerticalTextPosition(JButton.BOTTOM);
 		soyabeansButton.setHorizontalTextPosition(JButton.CENTER);
@@ -94,7 +94,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		peanutsButton = new JButton();
 		peanutsButton.addActionListener(this);
-		peanutsButton.setText("peanuts");
+		peanutsButton.setText("Peanuts");
 		peanutsButton.setIcon(peanutsImage);
 		peanutsButton.setVerticalTextPosition(JButton.BOTTOM);
 		peanutsButton.setHorizontalTextPosition(JButton.CENTER);
@@ -104,7 +104,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		greengramsButton = new JButton();
 		greengramsButton.addActionListener(this);
-		greengramsButton.setText("greengrams");
+		greengramsButton.setText("Green Grams");
 		greengramsButton.setIcon(greengramsImage);
 		greengramsButton.setVerticalTextPosition(JButton.BOTTOM);
 		greengramsButton.setHorizontalTextPosition(JButton.CENTER);
@@ -114,7 +114,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 				
 		frenchbeansButton = new JButton();
 		frenchbeansButton.addActionListener(this);
-		frenchbeansButton.setText("frenchbeans");
+		frenchbeansButton.setText("French Beans");
 		frenchbeansButton.setIcon(frenchbeansImage);
 		frenchbeansButton.setVerticalTextPosition(JButton.BOTTOM);
 		frenchbeansButton.setHorizontalTextPosition(JButton.CENTER);
@@ -124,7 +124,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		blackbeansButton = new JButton();
 		blackbeansButton.addActionListener(this);
-		blackbeansButton.setText("blackbeans");
+		blackbeansButton.setText("Black Beans");
 		blackbeansButton.setIcon(blackbeansImage);
 		blackbeansButton.setVerticalTextPosition(JButton.BOTTOM);
 		blackbeansButton.setHorizontalTextPosition(JButton.CENTER);
@@ -134,7 +134,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		lentilsButton = new JButton();
 		lentilsButton.addActionListener(this);
-		lentilsButton.setText("lentils");
+		lentilsButton.setText("Lentils");
 		lentilsButton.setIcon(lentilsImage);
 		lentilsButton.setVerticalTextPosition(JButton.BOTTOM);
 		lentilsButton.setHorizontalTextPosition(JButton.CENTER);
@@ -142,10 +142,10 @@ public class GrainsPanel extends JPanel implements ActionListener{
 		lentilsButton.setBackground(Color.WHITE);
 		lentilsButton.setBorder(BorderFactory.createEmptyBorder());
 						
-		//grains
+		//cereals
 		cornButton = new JButton();
 		cornButton.addActionListener(this);
-		cornButton.setText("corn");
+		cornButton.setText("Corn");
 		cornButton.setIcon(cornImage);
 		cornButton.setVerticalTextPosition(JButton.BOTTOM);
 		cornButton.setHorizontalTextPosition(JButton.CENTER);
@@ -155,7 +155,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		riceButton = new JButton();
 		riceButton.addActionListener(this);
-		riceButton.setText("rice");
+		riceButton.setText("Rice");
 		riceButton.setIcon(riceImage);
 		riceButton.setVerticalTextPosition(JButton.BOTTOM);
 		riceButton.setHorizontalTextPosition(JButton.CENTER);
@@ -165,7 +165,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		wheatButton = new JButton();
 		wheatButton.addActionListener(this);
-		wheatButton.setText("wheat");
+		wheatButton.setText("Wheat");
 		wheatButton.setIcon(wheatImage);
 		wheatButton.setVerticalTextPosition(JButton.BOTTOM);
 		wheatButton.setHorizontalTextPosition(JButton.CENTER);
@@ -175,7 +175,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 						
 		oatsButton = new JButton();
 		oatsButton.addActionListener(this);
-		oatsButton.setText("oats");
+		oatsButton.setText("Oats");
 		oatsButton.setIcon(oatsImage);
 		oatsButton.setVerticalTextPosition(JButton.BOTTOM);
 		oatsButton.setHorizontalTextPosition(JButton.CENTER);
@@ -185,7 +185,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 					
 		sorghumButton = new JButton();
 		sorghumButton.addActionListener(this);
-		sorghumButton.setText("sorghum");
+		sorghumButton.setText("Sorghum");
 		sorghumButton.setIcon(sorghumImage);
 		sorghumButton.setVerticalTextPosition(JButton.BOTTOM);
 		sorghumButton.setHorizontalTextPosition(JButton.CENTER);
@@ -195,7 +195,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 					
 		milletButton = new JButton();
 		milletButton.addActionListener(this);
-		milletButton.setText("millet");
+		milletButton.setText("Millet");
 		milletButton.setIcon(milletImage);
 		milletButton.setVerticalTextPosition(JButton.BOTTOM);
 		milletButton.setHorizontalTextPosition(JButton.CENTER);
@@ -203,7 +203,7 @@ public class GrainsPanel extends JPanel implements ActionListener{
 		milletButton.setBackground(Color.WHITE);
 		milletButton.setBorder(BorderFactory.createEmptyBorder());
 						
-		// Add items to the vegFruitsPanel
+		// Add items to the grainsPanel
 		this.setSize(710, 485);
 		this.setBounds(0, 50, 710, 485);
 		this.setBackground(new Color(102, 255, 102));
@@ -229,52 +229,50 @@ public class GrainsPanel extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getSource()==beansButton) {
-			System.out.println("You just ordered beans");
+			System.out.println("You just ordered Beans");
 		}
 		else if (e.getSource()==peasButton) {
-			System.out.println("You just ordered peas");
+			System.out.println("You just ordered Peas");
 		}
 		else if (e.getSource()==pigeonpeasButton) {
-			System.out.println("You just ordered Avocado");
+			System.out.println("You just ordered Pigeon peas");
 		}
 		else if (e.getSource()==soyabeansButton) {
-			System.out.println("You just ordered soyabeans");
+			System.out.println("You just ordered Soya beans");
 		}
 		else if (e.getSource()==peanutsButton) {
-			System.out.println("You just ordered peanuts");
+			System.out.println("You just ordered Peanuts");
 		}
 		else if (e.getSource()==greengramsButton) {
-			System.out.println("You just ordered greengrams");
+			System.out.println("You just ordered Green grams");
 		}
 		else if (e.getSource()==blackbeansButton) {
-			System.out.println("You just ordered blackbeans");
+			System.out.println("You just ordered Black beans");
 		}
 		else if (e.getSource()==frenchbeansButton) {
-			System.out.println("You just ordered frenchbeans");
+			System.out.println("You just ordered French beans");
 		}
 		else if (e.getSource()==lentilsButton) {
-			System.out.println("You just ordered lentils");
+			System.out.println("You just ordered Lentils");
 		}
 		else if (e.getSource()==cornButton) {
-			System.out.println("You just ordered corn");
+			System.out.println("You just ordered Corn");
 		}
 		else if (e.getSource()==riceButton) {
-			System.out.println("You just ordered rice");
+			System.out.println("You just ordered Rice");
 		}
 		else if (e.getSource()==wheatButton) {
-			System.out.println("You just ordered wheat");
+			System.out.println("You just ordered Wheat");
 		}
 		else if (e.getSource()==oatsButton) {
-			System.out.println("You just ordered oats");
+			System.out.println("You just ordered Oats");
 		}
 		else if (e.getSource()==sorghumButton) {
-			System.out.println("You just ordered sorghum");
+			System.out.println("You just ordered Sorghum");
 		}
 		else if (e.getSource()==milletButton) {
-			System.out.println("You just ordered millet");
-		}
-		// TODO Auto-generated method stub
-		
+			System.out.println("You just ordered Millet");
+		}		
 	}
 
 }
