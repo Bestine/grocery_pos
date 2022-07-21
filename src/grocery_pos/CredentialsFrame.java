@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class CredentialsFrame extends JFrame implements ActionListener{
 	
@@ -92,10 +93,25 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		
 	
 		//=======================LOGIN PAGE=========================
+		JTextField usernameTextField = new JTextField();
+		usernameTextField.setText("Username");
+		usernameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+		usernameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+		usernameTextField.setForeground(Color.gray);
+		usernameTextField.setBounds(250, 70, 250, 50);
+		
+		JTextField passwordTextField = new JTextField();
+		passwordTextField.setText("Password");
+		passwordTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+		passwordTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+		passwordTextField.setForeground(Color.gray);
+		passwordTextField.setBounds(250, 140, 250, 50);
+		
+		
 		//submitLogins Button
 		submitLoginsButton = new JButton();
 		submitLoginsButton.setText("LOGIN");
-		submitLoginsButton.setBounds(300, 190, 150, 50);
+		submitLoginsButton.setBounds(300, 220, 150, 50);
 		submitLoginsButton.setFocusable(false);
 		submitLoginsButton.setFont(new Font("MV Boli", Font.BOLD, 20));
 		submitLoginsButton.setForeground(Color.WHITE);
@@ -108,6 +124,8 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		loginPanel.setSize(710, 485);
 		loginPanel.setBounds(0, 50, 710, 485);
 		loginPanel.setBackground(Color.WHITE);
+		loginPanel.add(usernameTextField);
+		loginPanel.add(passwordTextField);
 		loginPanel.add(submitLoginsButton);
 		loginPanel.setVisible(false);
 		
