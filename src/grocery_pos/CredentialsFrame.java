@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -13,7 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class CredentialsFrame extends JFrame implements ActionListener{
+public class CredentialsFrame extends JFrame implements ActionListener, FocusListener{
 	
 	JPanel loginPanel;
 	JPanel signupPanel;
@@ -25,6 +27,16 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 	
 	JButton submitLoginsButton;
 	JButton createAccountButton;
+	
+	//Personal info Entry fields
+	JTextField usernameOrEmailTextField;
+	JTextField passwordTextField;
+	//Sing ins
+	JTextField usernameTextField;
+	JTextField firstnameTextField;
+	JTextField lastnameTextField;
+	JTextField emailTextField;
+	JTextField passwordsignupTextField;
 	
 	CredentialsFrame(){
 		//========WELCOME PAGE============
@@ -93,19 +105,21 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		
 	
 		//=======================LOGIN PAGE=========================
-		JTextField usernameOrEmailTextField = new JTextField();
+		usernameOrEmailTextField = new JTextField();
 		usernameOrEmailTextField.setText("Username or Email");
 		usernameOrEmailTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
 		usernameOrEmailTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
 		usernameOrEmailTextField.setForeground(Color.gray);
 		usernameOrEmailTextField.setBounds(250, 70, 250, 50);
+		usernameOrEmailTextField.addFocusListener(this);
 		
-		JTextField passwordTextField = new JTextField();
+		passwordTextField = new JTextField();
 		passwordTextField.setText("Password");
 		passwordTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
 		passwordTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
 		passwordTextField.setForeground(Color.gray);
 		passwordTextField.setBounds(250, 140, 250, 50);
+		passwordTextField.addFocusListener(this);
 		
 		
 		//submitLogins Button
@@ -132,40 +146,45 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		
 		//======================SIGN UP PAGE=======================
 		// username first name, last name, email, password
-		JTextField usernameTextField = new JTextField();
+		usernameTextField = new JTextField();
 		usernameTextField.setText("Username");
 		usernameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
 		usernameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
 		usernameTextField.setForeground(Color.gray);
 		usernameTextField.setBounds(200, 10, 350, 50);
+		usernameTextField.addFocusListener(this);
 		
-		JTextField firstnameTextField = new JTextField();
+		firstnameTextField = new JTextField();
 		firstnameTextField.setText("First Name");
 		firstnameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
 		firstnameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
 		firstnameTextField.setForeground(Color.gray);
 		firstnameTextField.setBounds(200, 80, 350, 50);
+		firstnameTextField.addFocusListener(this);
 		
-		JTextField lastnameTextField = new JTextField();
+		lastnameTextField = new JTextField();
 		lastnameTextField.setText("Last Name");
 		lastnameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
 		lastnameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
 		lastnameTextField.setForeground(Color.gray);
 		lastnameTextField.setBounds(200, 150, 350, 50);
+		lastnameTextField.addFocusListener(this);
 		
-		JTextField emailTextField = new JTextField();
+		emailTextField = new JTextField();
 		emailTextField.setText("Email");
 		emailTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
 		emailTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
 		emailTextField.setForeground(Color.gray);
 		emailTextField.setBounds(200, 220, 350, 50);
+		emailTextField.addFocusListener(this);
 		
-		JTextField passwordsignupTextField = new JTextField();
+		passwordsignupTextField = new JTextField();
 		passwordsignupTextField.setText("Password");
 		passwordsignupTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
 		passwordsignupTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
 		passwordsignupTextField.setForeground(Color.gray);
 		passwordsignupTextField.setBounds(200, 290, 350, 50);
+		passwordsignupTextField.addFocusListener(this);
 		
 		createAccountButton = new JButton();
 		createAccountButton.setText("SIGN UP");
@@ -224,5 +243,55 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 			this.dispose();
 			new ItemsFrame();
 		}
+	}
+
+	@Override
+	public void focusGained(FocusEvent f) {
+		if(usernameOrEmailTextField.getText().equals("Username or Email")) {
+			usernameOrEmailTextField.setText("");
+		}
+		else if(passwordTextField.getText().equals("Password")) {
+			passwordTextField.setText("");
+		}
+		else if(usernameTextField.getText().equals("Username")) {
+			usernameTextField.setText("");
+		}
+		else if(firstnameTextField.getText().equals("First Name")) {
+			firstnameTextField.setText("");
+		}
+		else if(lastnameTextField.getText().equals("Last Name")) {
+			lastnameTextField.setText("");
+		}
+		else if(emailTextField.getText().equals("Email")) {
+			emailTextField.setText("");
+		}
+		else if(passwordsignupTextField.getText().equals("Password")) {
+			passwordsignupTextField.setText("");
+		}		
+	}
+
+	@Override
+	public void focusLost(FocusEvent f) {
+		if(usernameOrEmailTextField.getText().equals("")) {
+			usernameOrEmailTextField.setText("Username or Email");
+		}
+		else if(passwordTextField.getText().equals("")) {
+			passwordTextField.setText("Password");
+		}
+		else if(usernameTextField.getText().equals("")) {
+			usernameTextField.setText("Username");
+		}
+		else if(firstnameTextField.getText().equals("")) {
+			firstnameTextField.setText("First Name");
+		}
+		else if(lastnameTextField.getText().equals("")) {
+			lastnameTextField.setText("Last Name");
+		}
+		else if(emailTextField.getText().equals("")) {
+			emailTextField.setText("Email");
+		}
+		else if(passwordsignupTextField.getText().equals("")) {
+			passwordsignupTextField.setText("Email");
+		}	
 	}
 }
