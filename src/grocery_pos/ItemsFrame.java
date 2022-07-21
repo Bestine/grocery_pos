@@ -79,7 +79,7 @@ public class ItemsFrame extends JFrame implements ActionListener{
 		}
 		else if(e.getSource()==logoutButton) {
 			this.dispose();
-//			new CredentialsFrame();
+			new CredentialsFrame();
 		}
 		
 	}
