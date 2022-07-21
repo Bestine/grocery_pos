@@ -93,12 +93,12 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		
 	
 		//=======================LOGIN PAGE=========================
-		JTextField usernameTextField = new JTextField();
-		usernameTextField.setText("Username");
-		usernameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
-		usernameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
-		usernameTextField.setForeground(Color.gray);
-		usernameTextField.setBounds(250, 70, 250, 50);
+		JTextField usernameOrEmailTextField = new JTextField();
+		usernameOrEmailTextField.setText("Username or Email");
+		usernameOrEmailTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+		usernameOrEmailTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+		usernameOrEmailTextField.setForeground(Color.gray);
+		usernameOrEmailTextField.setBounds(250, 70, 250, 50);
 		
 		JTextField passwordTextField = new JTextField();
 		passwordTextField.setText("Password");
@@ -124,17 +124,52 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		loginPanel.setSize(710, 485);
 		loginPanel.setBounds(0, 50, 710, 485);
 		loginPanel.setBackground(Color.WHITE);
-		loginPanel.add(usernameTextField);
+		loginPanel.add(usernameOrEmailTextField);
 		loginPanel.add(passwordTextField);
 		loginPanel.add(submitLoginsButton);
 		loginPanel.setVisible(false);
 		
 		
 		//======================SIGN UP PAGE=======================
-		createAccountButton = new JButton();
+		// username first name, last name, email, password
+		JTextField usernameTextField = new JTextField();
+		usernameTextField.setText("Username");
+		usernameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+		usernameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+		usernameTextField.setForeground(Color.gray);
+		usernameTextField.setBounds(200, 10, 350, 50);
+		
+		JTextField firstnameTextField = new JTextField();
+		firstnameTextField.setText("First Name");
+		firstnameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+		firstnameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+		firstnameTextField.setForeground(Color.gray);
+		firstnameTextField.setBounds(200, 80, 350, 50);
+		
+		JTextField lastnameTextField = new JTextField();
+		lastnameTextField.setText("Last Name");
+		lastnameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+		lastnameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+		lastnameTextField.setForeground(Color.gray);
+		lastnameTextField.setBounds(200, 150, 350, 50);
+		
+		JTextField emailTextField = new JTextField();
+		emailTextField.setText("Email");
+		emailTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+		emailTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+		emailTextField.setForeground(Color.gray);
+		emailTextField.setBounds(200, 220, 350, 50);
+		
+		JTextField passwordsignupTextField = new JTextField();
+		passwordsignupTextField.setText("Password");
+		passwordsignupTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+		passwordsignupTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+		passwordsignupTextField.setForeground(Color.gray);
+		passwordsignupTextField.setBounds(200, 290, 350, 50);
+		
 		createAccountButton = new JButton();
 		createAccountButton.setText("SIGN UP");
-		createAccountButton.setBounds(300, 190, 150, 50);
+		createAccountButton.setBounds(300, 360, 150, 50);
 		createAccountButton.setFocusable(false);
 		createAccountButton.setFont(new Font("MV Boli", Font.BOLD, 20));
 		createAccountButton.setForeground(Color.WHITE);
@@ -147,6 +182,11 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		signupPanel.setSize(710, 485);
 		signupPanel.setBounds(0, 50, 710, 485);
 		signupPanel.setBackground(Color.WHITE);
+		signupPanel.add(usernameTextField);
+		signupPanel.add(firstnameTextField);
+		signupPanel.add(lastnameTextField);
+		signupPanel.add(emailTextField);
+		signupPanel.add(passwordsignupTextField);
 		signupPanel.add(createAccountButton);
 		signupPanel.setVisible(false);
 		
