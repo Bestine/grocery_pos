@@ -38,7 +38,43 @@ public class CredentialsFrame extends JFrame implements ActionListener, FocusLis
 	JTextField emailTextField;
 	JTextField passwordsignupTextField;
 	
+	public class SimpleTextField extends JTextField implements  FocusListener{
+		
+		String requiredInput;
+		
+		SimpleTextField(String rqInput){
+			requiredInput = rqInput;
+			
+			this.setText(requiredInput);
+			this.setFont(new Font("Consolas", Font.PLAIN, 25));
+			this.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+			this.setForeground(Color.gray);
+			this.setBounds(200, 10, 350, 50);
+			this.addFocusListener(this);
+		}
+
+		@Override
+		public void focusGained(FocusEvent f) {
+			// TODO Auto-generated method stub
+			
+			SimpleTextField simpleTextObj = new SimpleTextField(requiredInput);
+			
+			if(this.getText().equals(requiredInput)) {
+				this.setText("");
+			}			
+		}
+
+		@Override
+		public void focusLost(FocusEvent f) {
+			// TODO Auto-generated method stub
+			if(this.getText().equals("")) {
+				this.setText(requiredInput);
+			}			
+		}
+	}
+	
 	CredentialsFrame(){
+		
 		//========WELCOME PAGE============
 		
 		// Add a welcome icon
@@ -146,13 +182,13 @@ public class CredentialsFrame extends JFrame implements ActionListener, FocusLis
 		
 		//======================SIGN UP PAGE=======================
 		// username first name, last name, email, password
-		usernameTextField = new JTextField();
-		usernameTextField.setText("Username");
-		usernameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
-		usernameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
-		usernameTextField.setForeground(Color.gray);
-		usernameTextField.setBounds(200, 10, 350, 50);
-		usernameTextField.addFocusListener(this);
+//		usernameTextField = new JTextField();
+//		usernameTextField.setText("Username");
+//		usernameTextField.setFont(new Font("Consolas", Font.PLAIN, 25));
+//		usernameTextField.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+//		usernameTextField.setForeground(Color.gray);
+//		usernameTextField.setBounds(200, 10, 350, 50);
+//		usernameTextField.addFocusListener(this);
 		
 		firstnameTextField = new JTextField();
 		firstnameTextField.setText("First Name");
@@ -201,7 +237,8 @@ public class CredentialsFrame extends JFrame implements ActionListener, FocusLis
 		signupPanel.setSize(710, 485);
 		signupPanel.setBounds(0, 50, 710, 485);
 		signupPanel.setBackground(Color.WHITE);
-		signupPanel.add(usernameTextField);
+		signupPanel.add(new SimpleTextField("Mustafa"));
+//		signupPanel.add(usernameTextField);
 		signupPanel.add(firstnameTextField);
 		signupPanel.add(lastnameTextField);
 		signupPanel.add(emailTextField);
