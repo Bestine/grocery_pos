@@ -17,6 +17,11 @@ import javax.swing.JTextField;
 
 public class CredentialsFrame extends JFrame implements ActionListener{
 	
+	//Login Info
+	final String username = "mustafa";
+	final String password = "Mustafa123?";
+	
+	
 	JPanel loginPanel;
 	JPanel signupPanel;
 	
@@ -236,8 +241,9 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 			signupPanel.setVisible(true);
 		}
 		else if(e.getSource()==submitLoginsButton) {
-			this.dispose();
-			new ItemsFrame();
+			
+			/*this.dispose();
+			new ItemsFrame();*/
 		}
 		else if(e.getSource()==createAccountButton) {
 			this.dispose();
