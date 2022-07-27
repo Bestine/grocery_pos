@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -241,9 +242,17 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 			signupPanel.setVisible(true);
 		}
 		else if(e.getSource()==submitLoginsButton) {
-			
-			/*this.dispose();
-			new ItemsFrame();*/
+			if(username.equals(usernameOrEmailTextField.getText()) 
+					&& password.equals(passwordTextField.getText())) {
+				this.dispose();
+				new ItemsFrame();
+			}
+			else {
+				JOptionPane.showMessageDialog(null, 
+						"wrong password or username", 
+						"Login Error", 
+						JOptionPane.ERROR_MESSAGE);
+				}
 		}
 		else if(e.getSource()==createAccountButton) {
 			this.dispose();
