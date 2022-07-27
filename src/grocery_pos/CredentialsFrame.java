@@ -19,7 +19,7 @@ import javax.swing.JTextField;
 public class CredentialsFrame extends JFrame implements ActionListener{
 	
 	//Login Info
-	final String username = "mustafa";
+	final String username = "Mustafa";
 	final String password = "Mustafa123?";
 	
 	
@@ -245,11 +245,22 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 			if(username.equals(usernameOrEmailTextField.getText()) 
 					&& password.equals(passwordTextField.getText())) {
 				this.dispose();
+				JOptionPane.showMessageDialog(null,
+						"Welcome " + username, 
+						"Login Confirmed", 
+						JOptionPane.PLAIN_MESSAGE);
 				new ItemsFrame();
 			}
+			else if("Username or Email".equals(usernameOrEmailTextField.getText()) 
+					&& "Password".equals(passwordTextField.getText())) {
+				JOptionPane.showMessageDialog(null, 
+						"Please Input Your Login Info", 
+						"Login Error", 
+						JOptionPane.ERROR_MESSAGE);
+				}
 			else {
 				JOptionPane.showMessageDialog(null, 
-						"wrong password or username", 
+						"Wrong Password or Username", 
 						"Login Error", 
 						JOptionPane.ERROR_MESSAGE);
 				}
