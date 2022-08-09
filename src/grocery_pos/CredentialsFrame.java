@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -14,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class CredentialsFrame extends JFrame implements ActionListener{
@@ -43,6 +46,19 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 	JTextField lastnameTextField;
 	JTextField emailTextField;
 	JTextField passwordsignupTextField;
+	
+	public class SimplePasswordField extends JPasswordField{
+		
+		
+		
+		SimplePasswordField(){
+			
+			this.setFont(new Font("Consolas", Font.PLAIN, 25));
+			this.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
+			this.setForeground(Color.gray);
+			
+		}
+	}
 	
 	public class SimpleTextField extends JTextField implements  FocusListener{
 		
@@ -149,7 +165,7 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		usernameOrEmailTextField = new SimpleTextField("Username or Email");
 		usernameOrEmailTextField.setBounds(250, 70, 250, 50);
 		
-		passwordTextField = new SimpleTextField("Password");
+		passwordTextField = new SimplePasswordField();
 		passwordTextField.setBounds(250, 140, 250, 50);
 		
 		
@@ -189,7 +205,7 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		emailTextField = new SimpleTextField("Email");
 		emailTextField.setBounds(200, 220, 350, 50);
 		
-		passwordsignupTextField = new SimpleTextField("Password");
+		passwordsignupTextField = new SimplePasswordField();
 		passwordsignupTextField.setBounds(200, 290, 350, 50);
 		
 		createAccountButton = new JButton();
