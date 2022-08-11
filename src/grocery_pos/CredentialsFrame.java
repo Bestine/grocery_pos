@@ -105,6 +105,8 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 				String insertedChar = Character.toString(e.getKeyChar());
 				insertedPassword += insertedChar; 
 				System.out.println(insertedPassword);
+				
+				passwordTextField.setText("*".repeat(insertedPassword.length()));
 			}
 		}
 	}
@@ -274,7 +276,7 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		}
 		else if(e.getSource()==submitLoginsButton) {
 			if(username.equals(usernameOrEmailTextField.getText()) 
-					&& password.equals(passwordTextField.getText())) {
+					&& password.equals(insertedPassword)) {
 				this.dispose();
 				JOptionPane.showMessageDialog(null,
 						"Welcome " + username, 
