@@ -165,7 +165,7 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		usernameOrEmailTextField = new SimpleTextField("Username or Email");
 		usernameOrEmailTextField.setBounds(250, 70, 250, 50);
 		
-		passwordTextField = new SimplePasswordField();
+		passwordTextField = new SimpleTextField("Password");
 		passwordTextField.setBounds(250, 140, 250, 50);
 		
 		
@@ -205,7 +205,7 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 		emailTextField = new SimpleTextField("Email");
 		emailTextField.setBounds(200, 220, 350, 50);
 		
-		passwordsignupTextField = new SimplePasswordField();
+		passwordsignupTextField = new SimpleTextField("Password");
 		passwordsignupTextField.setBounds(200, 290, 350, 50);
 		
 		createAccountButton = new JButton();
