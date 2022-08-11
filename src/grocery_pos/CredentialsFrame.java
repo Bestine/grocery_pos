@@ -8,6 +8,7 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -24,6 +25,8 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 	//Login Info
 	final String username = "Mustafa";
 	final String password = "Mustafa123?";
+	
+	String insertedPassword = "";
 	
 	
 	JPanel loginPanel;
@@ -47,20 +50,8 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 	JTextField emailTextField;
 	JTextField passwordsignupTextField;
 	
-	public class SimplePasswordField extends JPasswordField{
-		
-		
-		
-		SimplePasswordField(){
-			
-			this.setFont(new Font("Consolas", Font.PLAIN, 25));
-			this.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
-			this.setForeground(Color.gray);
-			
-		}
-	}
 	
-	public class SimpleTextField extends JTextField implements  FocusListener{
+	public class SimpleTextField extends JTextField implements  FocusListener, KeyListener{
 		
 		String requiredInput;
 		
@@ -72,6 +63,7 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 			this.setBorder(BorderFactory.createLineBorder(Color.green, 2, true));
 			this.setForeground(Color.gray);
 			this.addFocusListener(this);
+			this.addKeyListener(this);
 		}
 
 		@Override
@@ -91,6 +83,29 @@ public class CredentialsFrame extends JFrame implements ActionListener{
 			if(this.getText().equals("")) {
 				this.setText(requiredInput);
 			}			
+		}
+
+		@Override
+		public void keyPressed(KeyEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void keyReleased(KeyEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void keyTyped(KeyEvent e) {
+			// TODO Auto-generated method stub
+			
+			if(e.getSource()==passwordTextField) {
+				String insertedChar = Character.toString(e.getKeyChar());
+				insertedPassword += insertedChar; 
+				System.out.println(insertedPassword);
+			}
 		}
 	}
 	
