@@ -4,13 +4,15 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class VegFruitsPanel extends JPanel implements ActionListener{
+public class VegFruitsPanel extends JPanel implements ActionListener, MouseListener{
 	
 	//Add button for items
 	JButton mangoButton;
@@ -55,6 +57,7 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		//FRUITS		
 		mangoButton = new JButton();
 		mangoButton.addActionListener(this);
+		mangoButton.addMouseListener(this);
 		mangoButton.setText("Mango");
 		mangoButton.setIcon(mangoImage);
 		mangoButton.setVerticalTextPosition(JButton.BOTTOM);
@@ -274,5 +277,41 @@ public class VegFruitsPanel extends JPanel implements ActionListener{
 		else if (e.getSource()==tomatoButton) {
 			System.out.println("You just ordered Tomato");
 		}
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==mangoButton) {
+			mangoButton.setBackground(Color.BLUE);
+		}
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==mangoButton) {
+			mangoButton.setBackground(Color.WHITE);
+		}
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 }
