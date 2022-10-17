@@ -9,7 +9,7 @@ Build tool - gradle
 This is the initial look at the process of developing the standalone app
 
 ### Welcome page
-![welcome page](images/screenshots/Welcome page.png)
+![welcome page](images/screenshots/WelcomePage.png)
 
 Contains the login and sign up that leads one to credentials. The login and sing up buttons leads to their respective pages 
 
@@ -17,14 +17,14 @@ Contains the login and sign up that leads one to credentials. The login and sing
 ![login page](images/screenshots/login.png)
 
 ### Sign up page 
-![login page](images/screenshots/sign up.png)
+![login page](images/screenshots/sign_up.png)
 
 After verifying the credeantials, the items pages are dislayed. The default one being the fruits and vegetables page 
 ### Fruits and Vegetable page 
-![login page](images/screenshots/fruits and vegetables.png)
+![login page](images/screenshots/fruits_and_vegetables.png)
 ### Grains 
 This is the grains panel page
 ![login page](images/screenshots/grains.png)
 
 # FINAL STANDALONE UI/UX
-![final UI](UI_design/Grocery POS.png)
+![final UI](UI_design/GroceryPOS.png)
