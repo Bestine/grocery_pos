@@ -55,10 +55,10 @@ public class ItemsFrame extends JFrame implements ActionListener{
 
 		
 		this.setLayout(null);
-		this.setResizable(false);
+		this.setResizable(true);
 		this.setTitle("Grocery POS");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(710, 570);
+		this.setSize(1323, 740);
 		this.setVisible(true);
 		this.add(vegFruitsButton);
 		this.add(grainsButton);
