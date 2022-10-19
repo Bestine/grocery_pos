@@ -208,8 +208,8 @@ public class VegFruitsPanel extends JPanel implements ActionListener, MouseListe
 		tomatoButton.setBorder(BorderFactory.createEmptyBorder());
 				
 		// Add items to the vegFruitsPanel
-		this.setSize(710, 485);
-		this.setBounds(0, 50, 710, 485);
+		//this.setSize(710, 485);
+		this.setBounds(250, 0, 710, 740);
 		this.setBackground(new Color(102, 255, 102));
 		this.add(mangoButton);
 		this.add(appleButton);
